@@ -1,0 +1,124 @@
+/* index.css */
+body {
+    margin: 0;
+    font-family: 'Rubik', 'Nunito', 'Quicksand', sans-serif;
+
+    
+    
+  }
+  
+  .calculator {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+   
+    transition: background-color 0.5s ease;
+  }
+  
+  .calculator::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://crystalclearmaths.com/wp-content/uploads/2015/12/Mathematical-Symbols.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* adjust opacity here */
+    z-index: 0;
+  }
+  
+  .calculator-box {
+    position: relative;
+    z-index: 1;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    width: 320px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .calculator.light {
+    background-color: #ded9c0; /* Yellow background */
+  }
+  
+  .calculator.dark {
+    background-color: #604848; /* Dark background */
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .top-bar button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+   /*  */
+  .calculator.light > div {
+    --card-bg: #fff59d;
+    color: black;
+  }
+  
+  .calculator.dark > div {
+    --card-bg: #2e2e2e;
+    color: #a0eacb;
+  }
+  
+  .display {
+    text-align: right;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    min-height: 50px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  .buttons button {
+    border: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 30%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttons button:empty {
+    visibility: hidden;
+  }
+  
+  
+  .calculator.light .buttons button {
+    background-color: #d4c571;
+    color: #060404;
+  }
+  
+  .calculator.dark .buttons button {
+    background-color: #424242;
+    color: #fff;
+  }
+  
+  .buttons button:hover {
+    transform: scale(1.15);
+    
+  }
+  
